@@ -10,9 +10,11 @@
   <script src="products.js"></script>
   <script src="htmlMaker.js"></script>
   <script src="loadstore.js"></script>
+  <script src="addToCart.js"></script>
+  <script src="shoppingcart.js"></script>
   <script id="product-template" type="text/html">
 
-      <img class='photo' src='{{imageURL}}'prod_id='{{productId}}'>
+    <img class='photo' src='{{imageURL}}'prod_id='{{productId}}'>
 
     <div class='Name' prod_id='{{productId}}'>{{Name}}</div>
     <div class='price'>{{price}}</div>
@@ -22,6 +24,8 @@
     <div class='focusName'>{{Name}}</div>
     <div class='focusprice'>{{price}}</div>
     <div class='focusdetails'>{{details}}</div>
+    <input id="addToCart" type="button" value="clickme" onclick="addToCart({{productId}});" />
+
   </script>
 </head>
 <body>
