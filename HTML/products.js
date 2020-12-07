@@ -2,11 +2,11 @@ var products = {
   product: [
     {
       productId: 1,
-      Name: "Krish",
+      Name: "Mucus DM",
       Catigories: "Lee",
-      price: "123456",
-      imageURL: "images/img1.jpg",
-      details: "sdfasdf",
+      price: "$10.96",
+      imageURL: "images/mucusdm.jpg",
+      details: "GoodSense Maximum Strength Mucus DM Expectorant and Cough Suppressant",
     },
     {
       productId: 2,
