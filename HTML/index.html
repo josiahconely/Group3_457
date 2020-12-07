@@ -5,10 +5,25 @@
   <meta charset="utf-8">
   <meta description="this is the description">
   <title>The Grocery Store</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="products.js"></script>
+  <script src="htmlMaker.js"></script>
+  <script src="loadstore.js"></script>
+  <script id="product-template" type="text/html">
+
+      <img class='photo' src='{{imageURL}}'prod_id='{{productId}}'>
+
+    <div class='Name' prod_id='{{productId}}'>{{Name}}</div>
+    <div class='price'>{{price}}</div>
+  </script>
+  <script id="focus-product-template" type="text/html">
+    <img class='focusphoto' src='{{imageURL}}'>
+    <div class='focusName'>{{Name}}</div>
+    <div class='focusprice'>{{price}}</div>
+    <div class='focusdetails'>{{details}}</div>
+  </script>
 </head>
-
-
 <body>
 
 
@@ -23,24 +38,13 @@
     <td><h3><a href="contact.html">Contact Us</a></h3></td>
     </td>
   </tr>
-</table>
-
-
-  <hr>
-  <p>Welcome to our Wonderful store. Buy our stuff.
-  </p>
-  <hr>
-
-  <h3> Skills </h3>
-  <table cellspacing=10>
-    <tr>
-      <td>css</td>
-      <td>**</td>
-    </tr>
-    <tr>
-      <td>Java Script</td>
-      <td>***</td>
-    </tr>
   </table>
+  <div id="focus-product" class="focus-product">
+
+  </div>
+  <div id="products_display" class="products_display">
+
+  </div>
+
 </body>
 </html>
