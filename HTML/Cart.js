@@ -32,7 +32,7 @@ function upDateCart() {
   var htmlmulti = html_maker.getHTML(data);
   //generate dynamic HTML based on the data
   $("#cartList").html(htmlmulti);
-  $("#total").html("Total:" + cartTotal);
+  $("#total").html("Total:$" + cartTotal);
 }
 
 function parseCart() {

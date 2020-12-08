@@ -17,7 +17,7 @@
       <div class="grid-item All {{Catigories}}">
         <img class='photo' src='{{imageURL}}' prod_id='{{productId}}'>
         <div class='Name' prod_id='{{productId}}'>{{Name}}</div>
-        <div class='price'>{{price}}</div>
+        <div class='price: $'>{{price}}</div>
       </div>
     </script>
 
@@ -25,7 +25,7 @@
       <img class='focusphoto float-left' src='{{imageURL}}'>
       <div class='focusName'><b>{{Name}}</b></div>
       <div class='focusprice'>
-        <p>{{price}}
+        <p>${{price}}
       </div>
       <div class='focusdetails'>{{details}}</div>
 
@@ -37,7 +37,7 @@
         <br />
         <img class='photo-cart' src='{{imageURL}}'>
         <div class='Name-cart'>{{Name}}</div>
-        <div class='price-cart'>{{price}}</div>
+        <div class='price-cart'>${{price}}</div>
         <input id="removeFromCart" type="button" value="Delete" onclick="removeFromCart({{productId}});" />
       </div>
     </script>
