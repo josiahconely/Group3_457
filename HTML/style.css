@@ -1,20 +1,25 @@
 /* Make it a marquee */
 
-/* .focus-product {
-  width: 80%;
-  height: 20px;
+.focus-product {
+  grid-column: 2;
+  grid-row: 2;
+  border-style: solid;
+  width: 700px;
   font-size: 18px;
   border-bottom: 1px solid lightgray;
   border-top: 1px solid lightgray;
   padding: 5px;
   padding-bottom: 10px;
-} */
+}
 
-/* .products_display {
+.products_display {
+  border-style: solid;
+  grid-column: 2;
+  grid-row: 3;
   text-decoration: none;
   padding-left: 20px;
   padding-right: 20px;
-} */
+}
 
 .DivWithScroll {
   height: 800px;
@@ -22,24 +27,45 @@
   overflow-x: hidden;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  background-color: blue;
+  padding: 10px;
+  align-items: center;
+}
+
+.grid-item {
+  align-items: center;
+}
+
+.master-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+.header {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.leftmenue {
+  grid-column: 1;
+  grid-row: 1/4;
+}
+.rightmenue {
+  grid-column: 3;
+  grid-row: 1/4;
+}
+
 .photo-cart {
   object-fit: contain;
   height: 100px;
   width: 100px;
-}
-
-.right {
-  left: 100%;
-  background-color: white;
-}
-
-.detail {
-  background-color: rgb(245, 245, 245);
-  border: lightgray solid 1px;
-  border-radius: 5px;
-  width: 82%;
-  height: 230px;
-  padding: 5px;
 }
 
 .focusphoto {
@@ -71,9 +97,6 @@
   font-size: 17px;
   background-color: lightgray;
   padding: 10px;
-  position: fixed;
-  top: 0;
-  right: 0;
 }
 
 .cartList {

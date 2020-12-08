@@ -13,9 +13,11 @@
     <script src="shoppingcart.js"></script>
 
     <script id="product-template" type="text/html">
+      <div class="grid-item">
       <img class='photo' src='{{imageURL}}'prod_id='{{productId}}'>
       <div class='Name' prod_id='{{productId}}'>{{Name}}</div>
       <div class='price'>{{price}}</div>
+      </div>
     </script>
 
     <script id="focus-product-template" type="text/html">
@@ -35,35 +37,38 @@
     </script>
   </head>
   <body>
-    <table cellspacing="10">
-      <tr>
-        <td><h1>Dons the Man Grocery Store</h1></td>
-      </tr>
-      <tr>
-        <td>
-          <h3><a href="index.html">Home</a></h3>
-        </td>
-        <td>
-          <h3><a href="offerings.html">Our Offerings!</a></h3>
-        </td>
-        <td>
-          <h3><a href="contact.html">Contact Us</a></h3>
-        </td>
-      </tr>
-    </table>
-    <div id="focus-product" class="focus-product"></div>
-    <div id="products_display" class="products_display"></div>
-    <div id="MyCart" class="MyCart">
-      <span>
-        <h3>My Cart</h3>
-        <input
-          id="clearCart"
-          type="button"
-          value="clearCart"
-          onclick="clearCart();"
-        />
-      </span>
-      <div id="cartList" class="cartList DivWithScroll"></div>
+    <div class="master-container">
+      <table cellspacing="10" class="item1">
+        <tr>
+          <td><h1>Dons the Man Grocery Store</h1></td>
+        </tr>
+        <tr>
+          <td>
+            <h3><a href="index.html">Home</a></h3>
+          </td>
+          <td>
+            <h3><a href="offerings.html">Our Offerings!</a></h3>
+          </td>
+          <td>
+            <h3><a href="contact.html">Contact Us</a></h3>
+          </td>
+        </tr>
+      </table>
+      <div class="leftmenue"></div>
+      <div id="focus-product" class="focus-product"></div>
+      <div id="products_display" class="products_display grid-container"></div>
+      <div id="MyCart" class="MyCart rightmenue">
+        <span>
+          <h3>My Cart</h3>
+          <input
+            id="clearCart"
+            type="button"
+            value="clearCart"
+            onclick="clearCart();"
+          />
+        </span>
+        <div id="cartList" class="cartList DivWithScroll"></div>
+      </div>
     </div>
   </body>
 </html>
