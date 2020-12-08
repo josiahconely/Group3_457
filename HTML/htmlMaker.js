@@ -10,14 +10,14 @@ htmlMaker.prototype.setTemplate = function (template) {
 //the parameters are passed as an associative array. They are used as parameters in the template
 htmlMaker.prototype.getHTML = function (values) {
   var html = "";
-  console.log("got to HTMLmaker1");
+  //console.log("got to HTMLmaker1");
   if ($.isArray(values)) {
     for (var i = 0; i < values.length; ++i) {
-      console.log("got to HTMLmaker2");
+      //console.log("got to HTMLmaker2");
       html += this.get_html_unrepeated(values[i]);
     }
   } else html = this.get_html_unrepeated(values);
-  console.log(html);
+  //console.log("This is the returned HTML:" + html);
   return html;
 };
 

@@ -6,6 +6,7 @@ function load_store() {
   var data = products["product"];
   console.log("got to load_store");
   console.log(data);
+  console.log("This is the data list: " + data);
   //loads products
   var template1 = $("#product-template").html();
   var html_maker = new htmlMaker(template1);

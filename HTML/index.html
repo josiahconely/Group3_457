@@ -1,54 +1,68 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta description="this is the description" />
+    <title>The Grocery Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="products.js"></script>
+    <script src="htmlMaker.js"></script>
+    <script src="loadstore.js"></script>
+    <script src="Cart.js"></script>
+    <script src="shoppingcart.js"></script>
 
-<head>
-  <meta charset="utf-8">
-  <meta description="this is the description">
-  <title>The Grocery Store</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="products.js"></script>
-  <script src="htmlMaker.js"></script>
-  <script src="loadstore.js"></script>
-  <script src="addToCart.js"></script>
-  <script src="shoppingcart.js"></script>
-  <script id="product-template" type="text/html">
+    <script id="product-template" type="text/html">
+      <img class='photo' src='{{imageURL}}'prod_id='{{productId}}'>
+      <div class='Name' prod_id='{{productId}}'>{{Name}}</div>
+      <div class='price'>{{price}}</div>
+    </script>
 
-    <img class='photo' src='{{imageURL}}'prod_id='{{productId}}'>
+    <script id="focus-product-template" type="text/html">
+      <img class='focusphoto' src='{{imageURL}}'>
+      <div class='focusName'>{{Name}}</div>
+      <div class='focusprice'>{{price}}</div>
+      <div class='focusdetails'>{{details}}</div>
+      <input id="addToCart" type="button" value="add To Cart" onclick="addToCart({{productId}});" />
+    </script>
 
-    <div class='Name' prod_id='{{productId}}'>{{Name}}</div>
-    <div class='price'>{{price}}</div>
-  </script>
-  <script id="focus-product-template" type="text/html">
-    <img class='focusphoto' src='{{imageURL}}'>
-    <div class='focusName'>{{Name}}</div>
-    <div class='focusprice'>{{price}}</div>
-    <div class='focusdetails'>{{details}}</div>
-    <input id="addToCart" type="button" value="clickme" onclick="addToCart({{productId}});" />
-
-  </script>
-</head>
-<body>
-
-
-<table cellspacing=10>
-  <tr>
-    <td><h1>Dons the Man Grocery Store</h1></td>
-  </tr>
-  <tr>
-    <td>
-    <td><h3><a href="index.html">Home</a></h3></td>
-    <td><h3><a href="offerings.html">Our Offerings!</a></h3></td>
-    <td><h3><a href="contact.html">Contact Us</a></h3></td>
-    </td>
-  </tr>
-  </table>
-  <div id="focus-product" class="focus-product">
-
-  </div>
-  <div id="products_display" class="products_display">
-
-  </div>
-
-</body>
+    <script id="cart-product-template" type="text/html">
+      <img class='focusphoto-cart' src='{{imageURL}}'>
+      <div class='focusName-cart'>{{Name}}</div>
+      <div class='focusprice-cart'>{{price}}</div>
+      <input id="removeFromCart" type="button" value="Delete" onclick="removeFromCart({{productId}});" />
+    </script>
+  </head>
+  <body>
+    <table cellspacing="10">
+      <tr>
+        <td><h1>Dons the Man Grocery Store</h1></td>
+      </tr>
+      <tr>
+        <td>
+          <h3><a href="index.html">Home</a></h3>
+        </td>
+        <td>
+          <h3><a href="offerings.html">Our Offerings!</a></h3>
+        </td>
+        <td>
+          <h3><a href="contact.html">Contact Us</a></h3>
+        </td>
+      </tr>
+    </table>
+    <div id="focus-product" class="focus-product"></div>
+    <div id="products_display" class="products_display"></div>
+    <div id="MyCart" class="MyCart">
+      <span>
+        <h3>My Cart</h3>
+        <input
+          id="clearCart"
+          type="button"
+          value="clearCart"
+          onclick="clearCart();"
+        />
+      </span>
+      <div id="cartList" class="cartList"></div>
+    </div>
+  </body>
 </html>
