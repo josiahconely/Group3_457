@@ -27,9 +27,10 @@
     </script>
 
     <script id="cart-product-template" type="text/html">
-      <img class='focusphoto-cart' src='{{imageURL}}'>
-      <div class='focusName-cart'>{{Name}}</div>
-      <div class='focusprice-cart'>{{price}}</div>
+      <br />
+      <img class='photo-cart' src='{{imageURL}}'>
+      <div class='Name-cart'>{{Name}}</div>
+      <div class='price-cart'>{{price}}</div>
       <input id="removeFromCart" type="button" value="Delete" onclick="removeFromCart({{productId}});" />
     </script>
   </head>
@@ -62,7 +63,7 @@
           onclick="clearCart();"
         />
       </span>
-      <div id="cartList" class="cartList"></div>
+      <div id="cartList" class="cartList DivWithScroll"></div>
     </div>
   </body>
 </html>
