@@ -9,11 +9,12 @@
     <script src="products.js"></script>
     <script src="htmlMaker.js"></script>
     <script src="loadstore.js"></script>
+    <script src="catigorySelect.js"></script>
     <script src="Cart.js"></script>
     <script src="shoppingcart.js"></script>
 
     <script id="product-template" type="text/html">
-      <div class="grid-item">
+      <div class="grid-item All {{Catigories}}">
         <img class='photo' src='{{imageURL}}' prod_id='{{productId}}'>
         <div class='Name' prod_id='{{productId}}'>{{Name}}</div>
         <div class='price'>{{price}}</div>
@@ -62,37 +63,47 @@
       <div class="leftmenue">
         <ul>
           <li>
-            <label onclick="loadCatigory()" class="catigoryOption">All</label>
+            <label onclick="changeCat('All');" class="catigoryOption"
+              >All</label
+            >
           </li>
           <li>
-            <label onclick="loadCatigory()" class="catigoryOption">Food</label>
+            <label onclick="changeCat('Food');" class="catigoryOption"
+              >Food</label
+            >
           </li>
           <li>
-            <label onclick="loadCatigory()" class="catigoryOption">Drink</label>
+            <label onclick="changeCat('Drink');" class="catigoryOption"
+              >Drink</label
+            >
           </li>
           <li>
-            <label onclick="loadCatigory()" class="catigoryOption"
+            <label onclick="changeCat('Drug');" class="catigoryOption"
               >Medicine</label
             >
           </li>
           <li>
-            <label onclick="loadCatigory()" class="catigoryOption"
+            <label onclick="changeCat('Cosmetics');" class="catigoryOption"
               >Cosmetics</label
             >
           </li>
           <li>
-            <label onclick="loadCatigory()" class="catigoryOption">Toys</label>
+            <label onclick="changeCat('Toys');" class="catigoryOption"
+              >Toys</label
+            >
           </li>
           <li>
-            <label onclick="loadCatigory()" class="catigoryOption">Candy</label>
+            <label onclick="changeCat('Candy');" class="catigoryOption"
+              >Candy</label
+            >
           </li>
           <li>
-            <label onclick="loadCatigory()" class="catigoryOption"
+            <label onclick="changeCat('Snacks');" class="catigoryOption"
               >Snacks</label
             >
           </li>
           <li>
-            <label onclick="loadCatigory()" class="catigoryOption"
+            <label onclick="changeCat('Hygene');" class="catigoryOption"
               >Hygene</label
             >
           </li>

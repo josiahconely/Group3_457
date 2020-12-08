@@ -4,9 +4,7 @@ $(document).ready(load_store);
 
 function load_store() {
   var data = products["product"];
-  console.log("got to load_store");
-  console.log(data);
-  console.log("This is the data list: " + data);
+
   //loads products
   var template1 = $("#product-template").html();
   var html_maker = new htmlMaker(template1);
@@ -14,7 +12,6 @@ function load_store() {
   var htmlmulti = html_maker.getHTML(data);
   //generate dynamic HTML based on the data
   $("#products_display").html(htmlmulti);
-  console.log("inside loadstore.js multi" + htmlmulti);
 
   function loadDetail(id) {
     console.log("got to loadDetial");
