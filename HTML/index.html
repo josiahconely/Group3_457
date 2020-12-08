@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="products.js"></script>
+    <script src="catigoriesJSON.js"></script>
     <script src="htmlMaker.js"></script>
     <script src="loadstore.js"></script>
     <script src="catigorySelect.js"></script>
@@ -28,7 +29,6 @@
         <p>${{price}}
       </div>
       <div class='focusdetails'>{{details}}</div>
-
       <input class="btn-green" id="addToCart" type="button" value="Add To Cart" onclick="addToCart({{productId}});" />
     </script>
 
@@ -43,11 +43,12 @@
     </script>
   </head>
 
+  <!-- //////////////////////////////////////////////////////////////////// -->
   <body>
     <div class="page">
       <div class="master-container">
         <div class="grid-item header">
-          <h1>Dons the Man Grocery Store</h1>
+          <h1>Dons the Man Drug Store</h1>
           <hr />
           <a href="index.html " class="nav-bar-links float-left">Home</a>
           <a href="offerings.html" class="nav-bar-links float-left"
@@ -56,7 +57,7 @@
           <a href="contact.html" class="nav-bar-links float-left">Contact Us</a>
         </div>
         <div class="leftmenue">
-          <ul>
+          <ul id="catigoryMeneu">
             <li>
               <label class="catigoryOption" catigory="All">All</label>
             </li>

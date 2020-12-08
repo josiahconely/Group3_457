@@ -7,6 +7,7 @@ function load_store() {
   var html_maker = new htmlMaker(template1);
   //create an html Maker
   var htmlmulti = html_maker.getHTML(data);
+  console.log("data: " + data);
   //generate dynamic HTML based on the data
   $("#products_display").html(htmlmulti);
   //loads frist item as a default

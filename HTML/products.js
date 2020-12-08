@@ -29,7 +29,7 @@ var products = {
     },
     {
       productId: 4,
-      Name: "Krish",
+      Name: "DayQuil",
       Catigories: "Drug",
       price: 17.98,
       imageURL: "images/drug/dayquil.jpg",
@@ -46,7 +46,7 @@ var products = {
     },
     {
       productId: 6,
-      Name: "Cosmetic Bag ",
+      Name: "Cosmetic Bag",
       Catigories: "Cosmetic",
       price: 6.99,
       imageURL: "images/cosmetic/cosmeticbag.jpg",
