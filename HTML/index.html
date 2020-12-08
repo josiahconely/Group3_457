@@ -23,10 +23,10 @@
 
     <script id="focus-product-template" type="text/html">
       <img class='focusphoto' src='{{imageURL}}'>
-      <div class='focusName'>{{Name}}</div>
-      <div class='focusprice'>{{price}}</div>
+      <div class='focusName'><b>{{Name}}</b></div>
+      <div class='focusprice'><p style="color:green;">{{price}}</div>
       <div class='focusdetails'>{{details}}</div>
-      <input id="addToCart" type="button" value="add To Cart" onclick="addToCart({{productId}});" />
+      <input id="addToCart" type="button" value="Add To Cart" onclick="addToCart({{productId}});" />
     </script>
 
     <script id="cart-product-template" type="text/html">
@@ -46,8 +46,10 @@
         <tr>
           <td>
             <h1>Dons the Man Grocery Store</h1>
+            <hr>
           </td>
         </tr>
+        
         <tr>
           <td>
             <h3><a href="index.html">Home</a></h3>
@@ -117,7 +119,7 @@
           <input
             id="clearCart"
             type="button"
-            value="clearCart"
+            value="Clear Cart"
             onclick="clearCart();"
           />
         </span>
