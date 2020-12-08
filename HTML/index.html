@@ -14,9 +14,9 @@
 
     <script id="product-template" type="text/html">
       <div class="grid-item">
-      <img class='photo' src='{{imageURL}}'prod_id='{{productId}}'>
-      <div class='Name' prod_id='{{productId}}'>{{Name}}</div>
-      <div class='price'>{{price}}</div>
+        <img class='photo' src='{{imageURL}}' prod_id='{{productId}}'>
+        <div class='Name' prod_id='{{productId}}'>{{Name}}</div>
+        <div class='price'>{{price}}</div>
       </div>
     </script>
 
@@ -29,18 +29,23 @@
     </script>
 
     <script id="cart-product-template" type="text/html">
-      <br />
-      <img class='photo-cart' src='{{imageURL}}'>
-      <div class='Name-cart'>{{Name}}</div>
-      <div class='price-cart'>{{price}}</div>
-      <input id="removeFromCart" type="button" value="Delete" onclick="removeFromCart({{productId}});" />
+      <div class="cartItem">
+        <br />
+        <img class='photo-cart' src='{{imageURL}}'>
+        <div class='Name-cart'>{{Name}}</div>
+        <div class='price-cart'>{{price}}</div>
+        <input id="removeFromCart" type="button" value="Delete" onclick="removeFromCart({{productId}});" />
+      </div>
     </script>
   </head>
+
   <body>
     <div class="master-container">
       <table cellspacing="10" class="item1">
         <tr>
-          <td><h1>Dons the Man Grocery Store</h1></td>
+          <td>
+            <h1>Dons the Man Grocery Store</h1>
+          </td>
         </tr>
         <tr>
           <td>
@@ -54,7 +59,45 @@
           </td>
         </tr>
       </table>
-      <div class="leftmenue"></div>
+      <div class="leftmenue">
+        <ul>
+          <li>
+            <label onclick="loadCatigory()" class="catigoryOption">All</label>
+          </li>
+          <li>
+            <label onclick="loadCatigory()" class="catigoryOption">Food</label>
+          </li>
+          <li>
+            <label onclick="loadCatigory()" class="catigoryOption">Drink</label>
+          </li>
+          <li>
+            <label onclick="loadCatigory()" class="catigoryOption"
+              >Medicine</label
+            >
+          </li>
+          <li>
+            <label onclick="loadCatigory()" class="catigoryOption"
+              >Cosmetics</label
+            >
+          </li>
+          <li>
+            <label onclick="loadCatigory()" class="catigoryOption">Toys</label>
+          </li>
+          <li>
+            <label onclick="loadCatigory()" class="catigoryOption">Candy</label>
+          </li>
+          <li>
+            <label onclick="loadCatigory()" class="catigoryOption"
+              >Snacks</label
+            >
+          </li>
+          <li>
+            <label onclick="loadCatigory()" class="catigoryOption"
+              >Hygene</label
+            >
+          </li>
+        </ul>
+      </div>
       <div id="focus-product" class="focus-product"></div>
       <div id="products_display" class="products_display grid-container"></div>
       <div id="MyCart" class="MyCart rightmenue">
