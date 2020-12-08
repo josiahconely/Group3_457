@@ -1,10 +1,7 @@
 $(document).ready(load_store);
-//console.log(news.news[2].id);
-//const headlines[];
 
 function load_store() {
   var data = products["product"];
-  console.log("all data " + data);
   //loads products
   var template1 = $("#product-template").html();
   var html_maker = new htmlMaker(template1);
@@ -12,14 +9,12 @@ function load_store() {
   var htmlmulti = html_maker.getHTML(data);
   //generate dynamic HTML based on the data
   $("#products_display").html(htmlmulti);
-
-  console.log("origenal html" + htmlmulti);
+  //loads frist item as a default
+  loadDetail(data[0].productId);
 
   function loadDetail(id) {
-    console.log("got to loadDetial");
     var template2 = $("#focus-product-template").html();
     var html_maker = new htmlMaker(template2);
-
     //create an html Maker
     var i = 0;
     while (i < data.length) {
@@ -32,10 +27,9 @@ function load_store() {
     //generate dynamic HTML based on the data
   }
 
-  //loads frist item as a default
-  loadDetail(data[0].productId);
-
+  //changes the catigory that is visable
   function changeCat(cat) {
+    //creates copy of all products to shrink without affecting origenal data
     subproducts = JSON.parse(JSON.stringify(products));
     if (cat !== "All") {
       for (var i = 0; i < subproducts["product"].length; ) {
@@ -48,46 +42,26 @@ function load_store() {
       }
     }
     var data1 = subproducts["product"];
-    console.log("cat data " + data1);
     var template1 = $("#product-template").html();
     var html_maker = new htmlMaker(template1);
     //create an html Maker
     var htmlmulti = html_maker.getHTML(data1);
     //generate dynamic HTML based on the data
-    console.log("Got here!");
     $("#products_display").html(htmlmulti);
-
-    console.log("modified html" + htmlmulti);
   }
 
   $(document).on("click", ".photo", {}, function (e) {
-    console.log("got the click");
     var $this = $(this);
     loadDetail(Number($this.attr("prod_id")));
   });
+
   $(document).on("click", ".name", {}, function (e) {
-    console.log("got the click");
     var $this = $(this);
     loadDetail(Number($this.attr("prod_id")));
   });
+
   $(document).on("click", ".catigoryOption", {}, function (e) {
-    console.log("got the click");
     var $this = $(this);
     changeCat($this.attr("catigory"));
   });
-  // $(".photo").click(function () {
-  //   console.log("got the click");
-  //   var $this = $(this);
-  //   loadDetail(Number($this.attr("prod_id")));
-  // });
-  // $(".name").click(function () {
-  //   var $this = $(this);
-  //   loadDetail(Number($this.attr("prod_id")));
-  // });
-  // $(".catigoryOption").click(function () {
-  //   var $this = $(this);
-  //   changeCat($this.attr("catigory"));
-  // });
-
-  ///
 }

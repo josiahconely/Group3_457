@@ -22,11 +22,14 @@
     </script>
 
     <script id="focus-product-template" type="text/html">
-      <img class='focusphoto' src='{{imageURL}}'>
+      <img class='focusphoto float-left' src='{{imageURL}}'>
       <div class='focusName'><b>{{Name}}</b></div>
-      <div class='focusprice'><p style="color:green;">{{price}}</div>
+      <div class='focusprice'>
+        <p>{{price}}
+      </div>
       <div class='focusdetails'>{{details}}</div>
-      <input id="addToCart" type="button" value="Add To Cart" onclick="addToCart({{productId}});" />
+
+      <input class="btn-green" id="addToCart" type="button" value="Add To Cart" onclick="addToCart({{productId}});" />
     </script>
 
     <script id="cart-product-template" type="text/html">
@@ -41,71 +44,65 @@
   </head>
 
   <body>
-    <div class="master-container">
-      <table cellspacing="10" class="item1">
-        <tr>
-          <td>
-            <h1>Dons the Man Grocery Store</h1>
-            <hr />
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <h3><a href="index.html">Home</a></h3>
-          </td>
-          <td>
-            <h3><a href="offerings.html">Our Offerings!</a></h3>
-          </td>
-          <td>
-            <h3><a href="contact.html">Contact Us</a></h3>
-          </td>
-        </tr>
-      </table>
-      <div class="leftmenue">
-        <ul>
-          <li>
-            <label class="catigoryOption" catigory="All">All</label>
-          </li>
-          <li>
-            <label class="catigoryOption" catigory="Food">Food</label>
-          </li>
-          <li>
-            <label class="catigoryOption" catigory="Drink">Drink</label>
-          </li>
-          <li>
-            <label catigory="Drug" class="catigoryOption">Medicine</label>
-          </li>
-          <li>
-            <label catigory="Cosmetic" class="catigoryOption">Cosmetic</label>
-          </li>
-          <li>
-            <label catigory="Toys" class="catigoryOption">Toys</label>
-          </li>
-          <li>
-            <label catigory="Candy" class="catigoryOption">Candy</label>
-          </li>
-          <li>
-            <label catigory="Snacks" class="catigoryOption">Snacks</label>
-          </li>
-          <li>
-            <label catigory="Hygene" class="catigoryOption">Hygene</label>
-          </li>
-        </ul>
-      </div>
-      <div id="focus-product" class="focus-product"></div>
-      <div id="products_display" class="products_display grid-container"></div>
-      <div id="MyCart" class="MyCart rightmenue">
-        <span>
-          <h3>My Cart</h3>
-          <input
-            id="clearCart"
-            type="button"
-            value="Clear Cart"
-            onclick="clearCart();"
-          />
-        </span>
-        <div id="cartList" class="cartList DivWithScroll"></div>
+    <div class="page">
+      <div class="master-container">
+        <div class="grid-item header">
+          <h1>Dons the Man Grocery Store</h1>
+          <hr />
+          <a href="index.html " class="nav-bar-links float-left">Home</a>
+          <a href="offerings.html" class="nav-bar-links float-left"
+            >Our Offerings!</a
+          >
+          <a href="contact.html" class="nav-bar-links float-left">Contact Us</a>
+        </div>
+        <div class="leftmenue">
+          <ul>
+            <li>
+              <label class="catigoryOption" catigory="All">All</label>
+            </li>
+            <li>
+              <label class="catigoryOption" catigory="Food">Food</label>
+            </li>
+            <li>
+              <label class="catigoryOption" catigory="Drink">Drink</label>
+            </li>
+            <li>
+              <label catigory="Drug" class="catigoryOption">Medicine</label>
+            </li>
+            <li>
+              <label catigory="Cosmetic" class="catigoryOption">Cosmetic</label>
+            </li>
+            <li>
+              <label catigory="Toys" class="catigoryOption">Toys</label>
+            </li>
+            <li>
+              <label catigory="Candy" class="catigoryOption">Candy</label>
+            </li>
+            <li>
+              <label catigory="Snacks" class="catigoryOption">Snacks</label>
+            </li>
+            <li>
+              <label catigory="Hygene" class="catigoryOption">Hygene</label>
+            </li>
+          </ul>
+        </div>
+        <div id="focus-product" class="focus-product"></div>
+        <div
+          id="products_display"
+          class="products_display grid-container"
+        ></div>
+        <div id="MyCart" class="MyCart rightmenue">
+          <span>
+            <h3>My Cart</h3>
+            <input
+              id="clearCart"
+              type="button"
+              value="Clear Cart"
+              onclick="clearCart();"
+            />
+          </span>
+          <div id="cartList" class="cartList DivWithScroll"></div>
+        </div>
       </div>
     </div>
   </body>
