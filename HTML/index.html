@@ -94,12 +94,9 @@
         <div id="MyCart" class="MyCart rightmenue">
           <span>
             <h3>My Cart</h3>
-            <input
-              id="clearCart"
-              type="button"
-              value="Clear Cart"
-              onclick="clearCart();"
-            />
+            <h4 id="total"></h4>
+            <input type="button" value="Check Out" onclick="checkOut();" />
+            <input type="button" value="Clear Cart" onclick="clearCart();" />
           </span>
           <div id="cartList" class="cartList DivWithScroll"></div>
         </div>

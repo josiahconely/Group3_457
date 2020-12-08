@@ -1,3 +1,5 @@
+var cartTotal = 0;
+
 function addToCart(id) {
   cart["items"].push(id);
   upDateCart();
@@ -30,9 +32,11 @@ function upDateCart() {
   var htmlmulti = html_maker.getHTML(data);
   //generate dynamic HTML based on the data
   $("#cartList").html(htmlmulti);
+  $("#total").html("Total:" + cartTotal);
 }
 
 function parseCart() {
+  cartTotal = 0;
   var cartData = cart["items"];
   var cartList = {
     product: [],
@@ -40,6 +44,8 @@ function parseCart() {
   //console.log("Cart Items:" + cartData);
   for (var i = 0; i < cartData.length; i++) {
     cartList["product"].push(filterById(products["product"], cartData[i]));
+    cartTotal += cartList["product"][i].price;
+    cartTotal = round(cartTotal, 2);
   }
   //console.log("this is the JSON obj: " + JSON.stringify(cartList));
   return cartList;
@@ -48,4 +54,8 @@ function filterById(jsonObject, id) {
   return jsonObject.filter(function (jsonObject) {
     return jsonObject["productId"] == id;
   })[0];
+}
+
+function round(value, decimals) {
+  return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
 }
