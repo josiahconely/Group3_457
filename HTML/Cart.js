@@ -1,5 +1,9 @@
 var cartTotal = 0;
 
+var cart = {
+  items: [],
+};
+
 function addToCart(id) {
   cart["items"].push(id);
   upDateCart();
@@ -58,4 +62,12 @@ function filterById(jsonObject, id) {
 
 function round(value, decimals) {
   return Number(Math.round(value + "e" + decimals) + "e-" + decimals);
+}
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
 }
