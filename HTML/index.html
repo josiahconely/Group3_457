@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="style.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="products.js"></script>
-    <script src="catigoriesJSON.js"></script>
     <script src="htmlMaker.js"></script>
     <script src="loadstore.js"></script>
     <script src="catigorySelect.js"></script>
     <script src="Cart.js"></script>
     <script src="shoppingcart.js"></script>
-
+    <!-- Templates -->
     <script id="product-template" type="text/html">
       <div class="grid-item All {{Catigories}}">
         <img class='photo' src='{{imageURL}}' prod_id='{{productId}}'>
@@ -21,7 +20,7 @@
         <div class='price: $'>{{price}}</div>
       </div>
     </script>
-
+    <!-- Templates -->
     <script id="focus-product-template" type="text/html">
       <img class='focusphoto float-left' src='{{imageURL}}'>
       <div class='focusName'><b>{{Name}}</b></div>
@@ -31,14 +30,14 @@
       <div class='focusdetails'>{{details}}</div>
       <input class="btn-green" id="addToCart" type="button" value="Add To Cart" onclick="addToCart({{productId}});" />
     </script>
-
+    <!-- Templates -->
     <script id="cart-product-template" type="text/html">
       <div class="cartItem">
         <br />
         <img class='photo-cart' src='{{imageURL}}'>
         <div class='Name-cart'>{{Name}}</div>
         <div class='price-cart'>${{price}}</div>
-        <input id="removeFromCart" type="button" value="Delete" onclick="removeFromCart({{productId}});" />
+        <input id="removeFromCart" class="deleteBtn" type="button" value="Delete" onclick="removeFromCart({{productId}});" />
       </div>
     </script>
   </head>
@@ -96,8 +95,18 @@
           <span>
             <h3>My Cart</h3>
             <h4 id="total"></h4>
-            <input type="button" value="Check Out" onclick="checkOut();" />
-            <input type="button" value="Clear Cart" onclick="clearCart();" />
+            <input
+              type="button"
+              class="checkOutBtn"
+              value="Check Out"
+              onclick="checkOut();"
+            />
+            <input
+              class="clearCartBtn"
+              type="button"
+              value="Clear Cart"
+              onclick="clearCart();"
+            />
           </span>
           <div id="cartList" class="cartList DivWithScroll"></div>
         </div>
