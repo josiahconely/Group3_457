@@ -293,13 +293,16 @@ h3 {
 
 /* The popup form - hidden by default */
 .form-popup {
+  border-radius: 15px;
+  background-color: #f1f1f1;
+  padding: 5px;
   display: none;
   position: fixed;
   top: 30%;
-  left: 50%;
+  left: 40%;
   border: 3px solid #f1f1f1;
   z-index: 9;
-  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.8);
 }
 
 /* Add styles to the form container */
