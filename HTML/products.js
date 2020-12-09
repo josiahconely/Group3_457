@@ -160,7 +160,7 @@ var products = {
         "Great Value Beef Burgers, 85% Lean/15% Fat, 12 ct, 3 lb",
     },
     {
-      productId: 18,
+      productId: 19,
       Name: "Great Value Water",
       Catigories: "Drink",
       price: 3.98,
@@ -169,7 +169,7 @@ var products = {
         "Great Value Purified Drinking Water Value Pack, 16.9 fl oz, 40 ct",
     },
     {
-      productId: 19,
+      productId: 20,
       Name: "Welch's Fruit Snacks",
       Catigories: "snacks",
       price: 6.98,
