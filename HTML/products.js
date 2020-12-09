@@ -38,11 +38,11 @@ var products = {
     },
     {
       productId: 5,
-      Name: "Sambucol cold & flu",
+      Name: "Sambucol Cold & Flu",
       Catigories: "Drug",
       price: 19.49,
       imageURL: "images/drug/coldflurelief.jpg",
-      details: "Sambucol Cold & flu Relief Tablets, 60 Count",
+      details: "Sambucol Cold & Flu Relief Tablets, 60 Count",
     },
     {
       productId: 6,
@@ -51,7 +51,7 @@ var products = {
       price: 6.99,
       imageURL: "images/cosmetic/cosmeticbag.jpg",
       details:
-        "Cosmetic Bag for Women,Loomiloo Adorable Roomy Makeup Bags Travel Waterproof Toiletry Bag Accessories Organizer Sloth",
+        "Cosmetic Bag for Women, Loomiloo Adorable Roomy Makeup Bags Travel Waterproof Toiletry Bag Accessories Organizer Sloth",
     },
     {
       productId: 7,
@@ -86,6 +86,96 @@ var products = {
       imageURL: "images/cosmetic/makeupforkids.jpg",
       details:
         "Makeup Kits for Teens - Tablet Case Eyeshadow Palette for Women and Teen - Full Starter Kit or Make Up Gift Set for Teen Girls, Beginners or Pros - Variety Shade Array - by Toysical",
+    },
+    {
+      productId: 11,
+      Name: "Ghirardelli Chocolate",
+      Catigories: "Candy",
+      price: 9.48,
+      imageURL: "images/candy/ghirardelli.jpeg",
+      details:
+        "Ghirardelli Chocolate Caramel Assortment, 16.1 oz",
+    },
+    {
+      productId: 12,
+      Name: "Lay's Potato Chips",
+      Catigories: "Snacks",
+      price: 3.78,
+      imageURL: "images/snacks/lays.jpeg",
+      details:
+        "Lay's Dill Pickle Flavored Potato Chips, Party Size, 12.5 oz Bag",
+    },
+    {
+      productId: 13,
+      Name: "Ball Park Hot Dogs",
+      Catigories: "Food",
+      price: 3.24,
+      imageURL: "images/food/franks.jpeg",
+      details:
+        "Ball Park Beef Hot Dogs, Original Length, 8 Count",
+    },
+    {
+      productId: 14,
+      Name: "Mountain Dew",
+      Catigories: "Drink",
+      price: 2.88,
+      imageURL: "images/drink/mtndew.jpeg",
+      details:
+        "Mtn Dew Frost Bite, 16.9 oz Bottles, 6 Count",
+    },
+    {
+      productId: 15,
+      Name: "T-Rex Action Figure",
+      Catigories: "Toys",
+      price: 31.79,
+      imageURL: "images/toys/trex.jpeg",
+      details:
+        "Jurassic World Camp Cretaceous Epic Roarin Tyrannosaurus Rex Large Action Figure",
+    },
+    {
+      productId: 16,
+      Name: "Listerine Mouthwash",
+      Catigories: "Hygiene",
+      price: 6.57,
+      imageURL: "images/hygiene/mouthwash.jpeg",
+      details:
+        "Listerine Freshburst Antiseptic Bad Breath Mouthwash, Spearmint, 1.5 L",
+    },
+    {
+      productId: 17,
+      Name: "Old Spice Deodorant",
+      Catigories: "Hygiene",
+      price: 4.97,
+      imageURL: "images/hygiene/deodorant.jpeg",
+      details:
+        "Old Spice High Endurance Pure Sport Deodorant for Men, 3 oz Twin Pack",
+    },
+    {
+      productId: 18,
+      Name: "Great Value Burgers",
+      Catigories: "Food",
+      price: 10.92,
+      imageURL: "images/food/burgers.jpeg",
+      details:
+        "Great Value Beef Burgers, 85% Lean/15% Fat, 12 ct, 3 lb",
+    },
+    {
+      productId: 18,
+      Name: "Great Value Water",
+      Catigories: "Drink",
+      price: 3.98,
+      imageURL: "images/drink/water.jpeg",
+      details:
+        "Great Value Purified Drinking Water Value Pack, 16.9 fl oz, 40 ct",
+    },
+    {
+      productId: 19,
+      Name: "Welch's Fruit Snacks",
+      Catigories: "snacks",
+      price: 6.98,
+      imageURL: "images/snacks/fruitsnacks.jpeg",
+      details:
+        "Welch's Fruit Snacks, Mixed Fruit, 40 ct, 0.9 oz",
     },
   ],
 };
