@@ -1,5 +1,9 @@
 $(document).ready(load_store);
 
+var subproducts = {
+  product: [],
+};
+
 function load_store() {
   var data = products["product"];
   //loads products

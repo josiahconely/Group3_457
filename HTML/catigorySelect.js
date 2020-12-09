@@ -1,3 +1,0 @@
-var subproducts = {
-  product: [],
-};
