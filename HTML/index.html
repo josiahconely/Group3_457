@@ -99,7 +99,7 @@
               type="button"
               class="checkOutBtn"
               value="Check Out"
-              onclick="checkOut();"
+              onclick="openForm();"
             />
             <input
               class="clearCartBtn"
@@ -111,6 +111,40 @@
           <div id="cartList" class="cartList DivWithScroll"></div>
         </div>
       </div>
+    </div>
+
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Check Out</h1>
+        <label for="email"><b>Card Number</b></label>
+        <input type="text" placeholder="Card Number" name="card" required />
+        <label for="email"><b>Name On Card</b></label>
+        <input
+          type="text"
+          placeholder="Name On Card"
+          name="nameOnCard"
+          required
+        />
+        <label for="email"><b>Expire Date</b></label>
+        <input
+          type="text"
+          placeholder="Expire Date"
+          name="ExpireDate"
+          required
+        />
+        <label for="email"><b>Security Code</b></label>
+        <input
+          type="text"
+          placeholder="Security Code"
+          name="SecurityCode"
+          required
+        />
+
+        <button type="submit" class="btn">Pay</button>
+        <button type="submit" class="btn cancel" onclick="closeForm()">
+          Close
+        </button>
+      </form>
     </div>
   </body>
 </html>
