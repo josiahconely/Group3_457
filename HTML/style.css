@@ -17,6 +17,10 @@ html {
   font-family: Verdana;
 }
 
+.h1{
+  font-smooth: auto;
+}
+
 .float-left {
   float: left;
 }
