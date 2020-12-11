@@ -2,7 +2,6 @@ function htmlMaker(template) {
   //this class is used to generate dynamic HTML
   this.template = template;
 }
-
 htmlMaker.prototype.setTemplate = function (template) {
   this.template = template;
 };
